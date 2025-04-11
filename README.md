@@ -1,10 +1,10 @@
-# TanStackForge
+# BetaDash
 
-A modern, full-stack starter kit built on the TanStack suite, combining type-safe technologies for an exceptional developer experience.
+A full-stack, type safe Tanstack dashboard with Clerk auth, tRPC, Shadcn and the full Tanstack suite (tanstack: query, form, table, file router).
 
-Demo of app and UI here: **[TanStackForge Demo](https://tanstack-forge-starter.vercel.app/)**
+Demo of app and UI here: **[Beta-Dash Demo](https://tanstack-forge-starter.vercel.app/)**
 
-## ✨ Features
+## ✨ Tech Stack
 
 - 🚦 **[TanStack Router](https://tanstack.com/router)** - Type-safe file-based routing with loaders and actions
 - 🔄 **[TanStack Query](https://tanstack.com/query)** - Data fetching and caching
@@ -29,14 +29,14 @@ Demo of app and UI here: **[TanStackForge Demo](https://tanstack-forge-starter.v
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/yourusername/tanstack-forge.git
+```sh
+git clone https://github.com/GoDjMike/beta-dash.git
 cd tanstack-forge
 ```
 
 2. Install dependencies:
 
-```bash
+```sh
 pnpm install
 ```
 
@@ -56,13 +56,13 @@ VITE_DEV_MODE=true
 
 4. Push the database schema to your MongoDB instance:
 
-```bash
+```sh
 pnpm prisma db push
 ```
 
 5. Start the development server:
 
-```bash
+```sh
 pnpm dev
 ```
 
@@ -135,7 +135,7 @@ tanstack-forge/
 
 ## 🎨 Color Scheme and Styling
 
-TanStackForge uses a sophisticated color system defined in `src/index.css`:
+Beta-Dash uses a sophisticated color system defined in `src/index.css`:
 
 ```css
 :root {
@@ -173,7 +173,7 @@ TanStackForge uses a sophisticated color system defined in `src/index.css`:
 
 ## 🛣️ Routing with TanStack Router
 
-TanStackForge uses TanStack Router's file-based routing system:
+Beta-Dash uses TanStack Router's file-based routing system:
 
 ```
 src/routes/
@@ -208,7 +208,7 @@ export const Route = createFileRoute('/')({
 
 ## 🔐 Authentication
 
-TanStackForge supports two authentication modes:
+Beta-Dash supports two authentication modes:
 
 ### Development Mode
 
@@ -266,7 +266,7 @@ export const userRouter = router({
 
 ## 🔌 tRPC Integration
 
-TanStackForge provides a seamless integration between tRPC, TanStack Router, and TanStack Query for end-to-end type safety.
+Beta-Dash provides a seamless integration between tRPC, TanStack Router, and TanStack Query for end-to-end type safety.
 
 ### Base Setup
 ```typescript
@@ -335,7 +335,7 @@ function UserProfile() {
 
 ## 📝 Type System
 
-TanStackForge emphasizes type safety across the entire stack:
+Beta-Dash emphasizes type safety across the entire stack:
 
 ### Constants and Enums
 
@@ -343,7 +343,7 @@ Store application constants and enums in `src/lib/constants.ts`:
 
 ```typescript
 // src/lib/constants.ts
-export const APP_NAME = "TanStackForge";
+export const APP_NAME = "Beta-Dash";
 
 export enum UserRole {
   ADMIN = "ADMIN",
@@ -384,7 +384,7 @@ export interface ApiResponse<T> {
 
 ### End-to-End Type Safety
 
-TanStackForge provides end-to-end type safety through:
+Beta-Dash provides end-to-end type safety through:
 
 1. **Prisma Schema to TypeScript**:
    ```prisma
@@ -423,7 +423,7 @@ TanStackForge provides end-to-end type safety through:
 
 ## 🔄 Data Flow
 
-TanStackForge implements a clean and type-safe data flow:
+Beta-Dash implements a clean and type-safe data flow:
 
 1. **Database Layer** (Prisma with MongoDB)
    - Models defined in `prisma/schema.prisma`
@@ -448,7 +448,7 @@ TanStackForge implements a clean and type-safe data flow:
 
 ## 🧪 Testing
 
-TanStackForge includes a comprehensive testing setup:
+Beta-Dash includes a comprehensive testing setup:
 
 ### Unit Tests
 ```typescript
@@ -495,14 +495,14 @@ describe('User API', () => {
 ```
 
 Run tests with:
-```bash
+```sh
 pnpm test        # Run all tests
 pnpm test:watch  # Run tests in watch mode
 pnpm test:ui     # Run tests with UI
 pnpm test:coverage # Run tests with coverage report
 ```
 
-## 📚 Learn More
+## 📚 Resources
 
 - [TanStack Router Documentation](https://tanstack.com/router/latest/docs/framework/react/overview)
 - [TanStack Query Documentation](https://tanstack.com/query/latest/docs/react/overview)
@@ -510,11 +510,3 @@ pnpm test:coverage # Run tests with coverage report
 - [Prisma Documentation](https://www.prisma.io/docs)
 - [Clerk Documentation](https://clerk.com/docs)
 - [Shadcn UI Documentation](https://ui.shadcn.com/docs)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
